@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Thank you · Daily Five Club</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../config.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="logo" href="../"><span class="dot"></span>Daily Five Club</a></div></header>
+<main>
+<section class="final">
+ <div class="wrap narrow">
+  <div class="box">
+   <p class="r4">Payment received</p>
+   <h1 class="r1">Thank you! Your guide is ready.</h1>
+   <p id="what">Tap the button to download your PDF. We’ve also sent the link to your email.</p>
+   <a class="btn lime" id="dl" href="#">Download your guide</a>
+   <p class="soft" id="tip">Tip: open it in the free Adobe Acrobat Reader to check the boxes on your tablet, or print the tracker for your fridge.</p>
+  </div>
+ </div>
+</section>
+<section>
+ <div class="wrap narrow">
+  <div class="head"><p class="r4 pink">Start here</p><h2 class="r1">Your first 5 minutes</h2></div>
+  <ol>
+   <li>Pick a Monday to start.</li>
+   <li>Fill in “My plan” and the progress check on day 0.</li>
+   <li>Print the 30-day tracker and stick it on the fridge.</li>
+   <li>Tomorrow morning: a glass of water, then day 1.</li>
+  </ol>
+  <p class="soft">Download not working? Write to <a id="mail" href="mailto:hello@dailyfiveclub.com">hello@dailyfiveclub.com</a> and we’ll send it again.</p>
+ </div>
+</section>
+</main>
+<footer class="foot"><div class="wrap"><p>© 2026 Daily Five Club · dailyfiveclub.com</p><nav><a href="../privacy/">Privacy Policy</a><a href="../terms/">Terms &amp; Disclaimer</a></nav></div></footer>
+<script>
+(function () {
+  var cfg = window.DFC || { DOWNLOAD: {} };
+  var names = { moves: '5-Minute Moves', food: '5-Minute Food Habits', bundle: 'The 5-Minute Habit Plan' };
+  var p = new URLSearchParams(location.search).get('p');
+  var dl = document.getElementById('dl');
+  if (p && names[p]) { document.getElementById('what').textContent = 'Tap the button to download ' + names[p] + '. We’ve also sent the link to your email.'; }
+  var url = p && cfg.DOWNLOAD[p];
+  if (url) { dl.href = url; } else { dl.textContent = 'Check your email for the download link'; dl.removeAttribute('href'); }
+  if (cfg.CONTACT) { var m = document.getElementById('mail'); m.href = 'mailto:' + cfg.CONTACT; m.textContent = cfg.CONTACT; }
+})();
+</script>
+</body>
+</html>
