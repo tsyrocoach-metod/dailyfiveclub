@@ -8,9 +8,9 @@
 window.DFC = {
   MODE: "external",
   CHECKOUT: {
-    moves: "",   // ссылка на оплату «5-Minute Moves»
-    food: "",    // ссылка на оплату «5-Minute Food Habits»
-    bundle: ""   // ссылка на оплату комбо «The 5-Minute Habit Plan»
+    moves: "https://app.lava.top/products/8cd9d994-7ba6-4d9e-8482-143cc399e633",   // ссылка на оплату «5-Minute Moves»
+    food: "https://app.lava.top/products/24e14c73-33b3-42aa-8c26-cd17ae1e6bf7",    // ссылка на оплату «5-Minute Food Habits»
+    bundle: "https://app.lava.top/products/6304086b-4637-45ea-864a-3cf7eb1ccb86"   // ссылка на оплату комбо «The 5-Minute Habit Plan»
   },
   // Только для MODE "onsite": откуда скачивать файл после оплаты.
   // Сами PDF в публичный репозиторий не кладём – ставим сюда ссылки на закрытое хранилище.
